@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+header {
+  background-color: #f5ede4;
+  mix-blend-mode: pass-through;
+}
+
+header .header-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  gap: 40px;
+  align-items: center;
+  font-weight: Regular;
+  font-size: 16px;
+  color: rgba(62, 54, 40, 1);
+
+  mix-blend-mode: hard-light; /* Apply hard light blend mode */
+  position: relative; /* Required for inner shadow simulation */
+}
+nav ul li a {
+  text-decoration: none; /* Remove underlining */
+
+  color: inherit; /* Inherit text color from parent (nav ul) */
+}
+
+li {
+  list-style: none;
+}
+.custom-heading {
+  color: rgba(62, 54, 40, 1); /* Fully opaque color */
+  font-size: 28px; /* Set font size to 26px */
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-weight: 500; /* Set font weight to medium (500) */
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light; /* Apply hard light blend mode */
+}

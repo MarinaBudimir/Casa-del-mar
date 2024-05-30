@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+footer{
+    background-color: #dbbd98;
+    mix-blend-mode: pass-through;
+    
+}
+
+footer .footer-container{
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    display: grid; 
+    
+    justify-content: space-between;
+    grid-column: 60% 40%; 
+    grid-row: 4; 
+    
+    
+    
+}
+
+
+.custom-footing {
+    color: rgba(62, 54, 40, 1); /* Fully opaque color */
+    font-size: 28px; /* Set font size to 26px */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-weight: 500; /* Set font weight to medium (500) */
+    letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+    align-items: center; /* Align text vertically in its container */
+    mix-blend-mode: hard-light; /* Apply hard light blend mode */
+    
+}
+
+.custom-text{
+    color: #000000; 
+    font-size: 16px; 
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-weight: 400; /* Set font weight to medium (500) */
+    letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+    align-items: center; /* Align text vertically in its container */
+    mix-blend-mode: hard-light; /* Apply hard light blend mode */
+    text-decoration: none; /* Remove underlining */
+    flex-direction: row;
+}
+
+
+.button-container {
+    display: flex;
+    margin-left: -0.3em;
+    align-items: start;
+    gap: 6px;
+    
+    
+    
+}
+
+/* Style for small buttons */
+.small-button {
+    font-size: 16px; /* Set font size */
+    font-weight: 400; /* Apply font weight */
+    font-family: 'Poppins', sans-serif; 
+    color: black; /* Set text color */
+    background-color: white; /* Set background color */
+    border: none; /* Remove border */
+    padding: 8px 16px; /* Add padding */
+    text-decoration: none;
+    /* margin: 6px; /* Add border-radius: 5px; Add border radius */
+    
+}
+.small-button:hover {
+    background-color: #F5EDE4; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+.text1{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.text2{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-content: center;
+    
+}
+
+
+.text3{
+    
+    
+    
+    grid-row-start: 4; 
+    grid-column: 1 / span 2;
+    text-align: center;
+    
+    
+}
+.button5{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    margin-left: 0.03em;
+    
+}
+
+.button6{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    margin-left: 0.03em;
+    
+
+}
+
+
+.line-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .line-wrapper::before,
+  .line-wrapper::after {
+    content: ' ';
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 5px; 
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+  }
+  
+  
