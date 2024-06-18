@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+main {
+  background-color: #e8d5be;
+  mix-blend-mode: pass-through;
+}
+
+main .contact-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contact2-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+/* OVDJE SU I SLIKA I FORMA */
+.contact2-content {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+
+.contact2-containerforma {
+  background-color: #f5ede4;
+  padding: 60px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+* {
+  /* Add temporary border to visualize elements */
+  box-sizing: border-box; /* Ensure consistent box model */
+}
+
+.contact2-containerforma .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 15px;
+  gap: 60px;
+}
+
+.custom-contactheading4 {
+  color: #3e3628;
+  font-size: 36px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  padding-top: 0px;
+}
+
+.custom-text {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  text-align: justify;
+}
+
+.contact2-containerforma label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact2-containerforma input[type="text"],
+.contact2-containerforma input[type="email"],
+.contact2-containerforma input[type="tel"],
+.contact2-containerforma textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact2-containerforma input[type="message"],
+.contact2-containerforma textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact2-containerforma button {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.contact2-containerforma button:hover {
+  background-color: #f5ede4;
+}
+
+.error {
+  color: red;
+  font-size: 0.875em;
+}
+
+.rectangle {
+  width: 30%;
+  height: auto;
+  background-image: url("../../public/images/contact1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.no-resize {
+  resize: none;
+}

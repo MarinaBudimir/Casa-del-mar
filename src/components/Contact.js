@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Contact.css";
+// import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -125,6 +125,7 @@ function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
+                      className="no-resize"
                     />
                     {errors.message && (
                       <p className="error">{errors.message}</p>

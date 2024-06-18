@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUser } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
-import "./Home.css";
+// import "./Home.css";
 
 function Home() {
   return (
@@ -15,7 +15,8 @@ function Home() {
         </div>
 
         <div class="content-container">
-          <button className="ourgallery-button ">Our gallery</button>
+          <button className="ourgallery-button "></button>
+
           <div className="image-container">
             <img src="/images/home1.jpg" alt="" />
             <img src="/images/home2.jpg" alt="" />

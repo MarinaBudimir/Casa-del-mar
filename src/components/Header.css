@@ -36,11 +36,26 @@ li {
   list-style: none;
 }
 .custom-heading {
-  color: rgba(62, 54, 40, 1); /* Fully opaque color */
+  color: #3e3628;
+
   font-size: 28px; /* Set font size to 26px */
   font-family: "Poppins", sans-serif; /* Use Poppins font */
   font-weight: 500; /* Set font weight to medium (500) */
   letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
   align-items: center; /* Align text vertically in its container */
   mix-blend-mode: hard-light; /* Apply hard light blend mode */
+}
+
+.link {
+  text-decoration: none;
+  color: black !important;
+}
+
+.title {
+  color: #3e3628 /* Fully opaque color */ !important;
+}
+
+.icon {
+  text-decoration: none;
+  color: #3e3628 !important;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUser } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
-import "./About.css";
+// import "./About.css";
 
 function About() {
   return (
@@ -64,7 +64,7 @@ function About() {
               <p>
                 {" "}
                 Casa del mar listens and carries out the needs and desires of
-                her consumers. This company’s focus are well pleased buyers who
+                her consumers. This compan's focus are well pleased buyers who
                 are willing to buy again.
               </p>
             </div>

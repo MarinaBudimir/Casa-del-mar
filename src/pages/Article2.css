@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+main {
+  background-color: #e8d5be;
+  mix-blend-mode: pass-through;
+}
+
+main .article2-container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.custom-heading4 {
+  color: #3e3628;
+  font-size: 36px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  padding-top: 0px;
+}
+
+.custom-text {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  text-align: justify;
+}

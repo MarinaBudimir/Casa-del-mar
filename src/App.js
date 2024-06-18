@@ -9,6 +9,14 @@ import About from './components/About';
 import Contact from './components/Contact'; 
 import User from './components/User'; 
 import Account from './components/Account'; 
+import Card from './components/Card'; 
+import Blogcard from './components/Blogcard';
+import Articlecard from './components/Articlecard';
+import Collage from './components/Collage';
+import Additionalinfo from './components/Additionalinfo';
+import Salescard from './components/Salescard'; 
+
+
 
 
 
@@ -18,7 +26,7 @@ function App() {
    <main>
     <Header/>
 
-    <About/>
+    <Outlet/>
    
     <Footer/>
    </main>

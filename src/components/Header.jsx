@@ -2,6 +2,7 @@ import React from "react";
 import { FaUser } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const categories = [
   { name: "stolice" },
@@ -14,23 +15,29 @@ function Header() {
   return (
     <header>
       <div className="header-container">
-        <h2 class="custom-heading">casa del mar</h2>
+        <div className="custom-heading">
+          <Link to="/" className="link title">
+            casa del mar
+          </Link>
+        </div>
         <nav>
           <ul>
             <li>
-              <a href="">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="">about</a>
+              <Link to="/about">about</Link>
             </li>
             <li>
-              <a href="">products</a>
+              <Link to="/products">products</Link>
             </li>
             <li>
-              <a href="">blog</a>
+              <Link to="/blog">blog</Link>
             </li>
             <IoSearch />
-            <FaUser />
+            <Link to="/user" className="icon">
+              <FaUser />
+            </Link>
           </ul>
         </nav>
 

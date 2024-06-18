@@ -1,4 +1,163 @@
-h2{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+h2 {
+  color: #3e3628;
   margin: 0;
+  mix-blend-mode: hard-light;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+a {
+  text-decoration: none !important;
+  object-position: none;
 }
 
+.price {
+  text-decoration: none !important;
+}
+
+h3 {
+  color: #3e3628;
+  font-size: 22px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  padding-top: 0px;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0;
+}
+button:hover {
+  background-color: #f5ede4;
+  cursor: pointer;
+}
+
+h5 {
+  font-size: 24px;
+  font-family: "Lora", sans-serif;
+  font-weight: 600px;
+  letter-spacing: 0.03em;
+  justify-content: center;
+  display: inline;
+  padding-top: 0px;
+  color: #000000;
+}
+
+p {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  text-align: justify;
+
+  width: 100%;
+}
+
+.blogcard-button {
+  font-size: 16px; /* Set font size */
+  font-weight: 500; /* Apply font weight */
+  font-family: "Poppins", sans-serif;
+  color: black; /* Set text color */
+  background-color: white; /* Set background color */
+  border: none; /* Remove border */
+  padding: 8px 16px; /* Add padding */
+  text-decoration: none;
+  margin: 0;
+  display: inline-block;
+}
+
+.blogcard-button:hover {
+  background-color: #f5ede4; /* Change background color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.card p {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Lora", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  text-align: right;
+  font-weight: 600;
+}
+
+.card .heart-icon {
+  text-align: right;
+}
+
+.blogcard p {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Lora", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+
+  mix-blend-mode: hard-light;
+  text-align: justify;
+  font-weight: 600;
+  display: inline;
+  margin: 0 0;
+}
+
+h6 {
+  color: #000000;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  mix-blend-mode: hard-light;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+h7 {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  text-align: justify;
+  width: 100%;
+  display: inline-flex;
+
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+h8 {
+  color: #3e3628;
+  font-size: 36px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: center; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+  padding-top: 0px;
+  display: flex;
+  object-position: center;
+}
+
+h9 {
+  color: #3e3628;
+  font-size: 28px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: justify; /* Align text vertically in its container */
+  mix-blend-mode: hard-light;
+}

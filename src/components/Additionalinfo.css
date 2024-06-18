@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+.parent-container {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.additionalinfo-container {
+  display: grid;
+  grid-template-columns: 70% 30%; /* Ensure grid layout with proper column width */
+  align-items: center;
+  width: 100%; /* Ensure the container takes the full width */
+  text-decoration: none !important;
+  background-color: #e1c9ab;
+  color: inherit; /* Ensure text color is inherited */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 10px; /* Add spacing between each item */
+  padding-bottom: 10px;
+}
+
+.additionalinfo-details {
+  width: 100%; /* Ensure the details div takes the full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.info-heading,
+.info-subheading {
+  position: relative; /* Position relative for absolute positioning */
+  display: inline-block; /* Display as inline-block to center content */
+  width: 85%; /* Adjust width as needed */
+  padding-top: 7px; /* Padding on top */
+  padding-bottom: 7px; /* Padding on bottom */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Center text horizontally */
+}
+
+.info-heading::after,
+.info-subheading::after {
+  content: ""; /* Create pseudo-element for the underline */
+  position: absolute; /* Position absolutely relative to .info-heading and .info-subheading */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width of parent container */
+  height: 0.5px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+}
+
+.additionalinfo-img-container {
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  height: 100%; /* Ensure the container takes the full height */
+  display: flex;
+  justify-content: flex-end; /* Push the image to the right */
+  align-items: center; /* Center vertically */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  align-content: right;
+}
+
+.additionalinfo-img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  max-height: 170px; /* Limit image height if necessary */
+  object-fit: cover; /* Maintain image aspect ratio and cover container */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  align-content: right;
+}
