@@ -13,36 +13,6 @@ main .home-container {
   padding-top: 30px;
 }
 
-.custom-heading1 {
-  color: #000000;
-  font-size: 22px;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  text-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.custom-heading2 {
-  color: #3e3628;
-  font-size: 44px;
-  font-family: "Lora", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  padding-top: 5px;
-}
-
-.custom-text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  padding-top: 5px;
-}
-
 .image-container {
   display: flex;
   flex-direction: row;
@@ -82,4 +52,34 @@ img {
   justify-content: space-between; /* Ensure button and images are on opposite ends */
   align-items: start; /* Align items vertically in the center */
   min-height: 450px;
+}
+
+/* RESPONZIVNOST KOD NOVI CHATGPT */
+
+@media (max-width: 768px) {
+  main .home-container {
+    padding: 0.5rem 1rem;
+    padding-top: 30px;
+  }
+  .home-container p {
+    text-align: justify;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: justify;
+    min-height: auto;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 15px;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .ourgallery-button {
+    margin-bottom: 15px;
+  }
 }

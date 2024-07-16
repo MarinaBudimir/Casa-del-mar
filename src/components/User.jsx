@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./User.css";
+import { Link } from "react-router-dom";
 
 function User() {
   const [formData, setFormData] = useState({
@@ -44,17 +45,15 @@ function User() {
   return (
     <main>
       <div className="user-container">
-        <div className="custom-userheading4"> Hello!</div>
-        <div className="custom-text">
-          Please choose how you want to proceed.
-        </div>
+        <h1> Hello!</h1>
+        <p>Please choose how you want to proceed.</p>
 
         <div className="user2-container">
           <div className="user2-containerforma">
             <form onSubmit={handleSubmit}>
               <div className="form-row">
-                <h2 className="custom-userheading5"> Login</h2>
-                <h2 className="custom-userheading5"> Continue as a guest</h2>
+                <h3> Login</h3>
+                <h3> Continue as a guest</h3>
               </div>
 
               <div className="form-row">
@@ -73,7 +72,11 @@ function User() {
                 </div>
 
                 <div>
-                  <button type="submit">Continue</button>
+                  <button className="small-button">
+                    <Link to="/userdashboard" className="link">
+                      Continue
+                    </Link>
+                  </button>
                 </div>
               </div>
 
@@ -95,11 +98,24 @@ function User() {
 
               <div className="form-row">
                 <div>
-                  <button type="submit">Sign in</button>
+                  <button type="submit">
+                    {" "}
+                    {""}
+                    <Link to="/userdashboard" classname="link">
+                      {" "}
+                      Sign in
+                    </Link>
+                  </button>
                 </div>
               </div>
 
-              <button type="submit">Create account</button>
+              <button type="submit">
+                {" "}
+                <Link to="/account" classname="link">
+                  {" "}
+                  Create account
+                </Link>
+              </button>
             </form>
           </div>
         </div>

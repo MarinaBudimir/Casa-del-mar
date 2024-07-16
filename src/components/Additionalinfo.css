@@ -16,6 +16,7 @@
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   margin-bottom: 10px; /* Add spacing between each item */
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .additionalinfo-details {
@@ -63,4 +64,8 @@
   margin: 0; /* Remove margin */
   padding: 0; /* Remove padding */
   align-content: right;
+}
+
+.plus-icon {
+  float: right;
 }

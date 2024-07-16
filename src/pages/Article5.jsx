@@ -42,7 +42,7 @@ function Article5() {
   return (
     <div>
       <div className="article5-container">
-        <div className="custom-heading4">Modern lighting for large spaces </div>
+        <h1>Modern lighting for large spaces </h1>
 
         <div className="articlecard-list">
           {data.map((category) => (

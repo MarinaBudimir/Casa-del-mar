@@ -51,7 +51,7 @@ function Blog3() {
   return (
     <div>
       <div className="blog3-container">
-        <div className="custom-heading4">Our blog</div>
+        <h1>Our blog</h1>
         <p className="custom-text">
           Welcome to the captivating world of furniture – where each piece has a
           story to tell and each space becomes a canvas for your dreams.

@@ -27,7 +27,7 @@ const data = [
     url: "/blog/2",
     title: "How to reupholster furniture",
     description:
-      "You don’t like the fabric of your furniture anymore? Learn how It can be easily updated with fresh upholstery.",
+      "You don't like the fabric of your furniture anymore? Learn how It can be easily updated with fresh upholstery.",
     button: "Read more",
   },
 
@@ -51,7 +51,7 @@ function Blog2() {
   return (
     <div>
       <div className="blog2-container">
-        <div className="custom-heading4">Our blog</div>
+        <h1>Our blog</h1>
         <p className="custom-text">
           Welcome to the captivating world of furniture – where each piece has a
           story to tell and each space becomes a canvas for your dreams.

@@ -1,24 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Benches.css";
 import axios from "axios";
 
 const data = [
   {
-    title: "Chiara",
+    name: "Chiara",
     showHeart: true,
     imgSrc: "/images/benches1.png",
     price: "750,00€",
-    url: "/chiara",
+    url: "Chiara",
   },
   {
-    title: "Dilara",
+    name: "Dilara",
     showHeart: true,
     imgSrc: "/images/benches2.png",
     price: "800,00€",
   },
   {
-    title: "Vitalia",
+    name: "Vitalia",
     showHeart: true,
     imgSrc: "/images/benches3.png",
     price: "900,00€",
@@ -26,16 +26,13 @@ const data = [
 ];
 
 function Benches() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/benches")
-      .then((data) => console.log(data));
-  }, []);
+  const [benches, setBenches] = useState(data);
+
   return (
     <div>
       <div className="benches-container">
-        <div className="custom-heading4 ">Benches </div>
-        <p className="custom-text">
+        <h1>Benches </h1>
+        <p>
           {" "}
           Are you sitting comfortably? With our range of seating pieces you will
           be soon. Choose the one that suits you and your home the best. Sit
@@ -45,7 +42,7 @@ function Benches() {
           {data.map((category) => {
             return (
               <Card
-                title={category.title}
+                name={category.name}
                 showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}

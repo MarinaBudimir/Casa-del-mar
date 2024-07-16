@@ -17,24 +17,25 @@ footer .footer-container {
 }
 
 .custom-footing {
-  color: rgba(62, 54, 40, 1); /* Fully opaque color */
-  font-size: 28px; /* Set font size to 26px */
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
-  font-weight: 500; /* Set font weight to medium (500) */
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light; /* Apply hard light blend mode */
+  color: rgba(62, 54, 40, 1);
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  align-items: auto;
+  mix-blend-mode: hard-light;
+  margin: 0;
 }
 
 .custom-text {
   color: #000000;
   font-size: 16px;
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
-  font-weight: 400; /* Set font weight to medium (500) */
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light; /* Apply hard light blend mode */
-  text-decoration: none; /* Remove underlining */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  align-items: center;
+  mix-blend-mode: hard-light;
+  text-decoration: none;
   flex-direction: row;
 }
 
@@ -44,21 +45,19 @@ footer .footer-container {
   gap: 10px;
 }
 
-/* Style for small buttons */
 .small-button {
-  font-size: 16px; /* Set font size */
-  font-weight: 400; /* Apply font weight */
+  font-size: 16px;
+  font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: black; /* Set text color */
-  background-color: white; /* Set background color */
-  border: none; /* Remove border */
-  padding: 8px 16px; /* Add padding */
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
   text-decoration: none;
-  /* margin: 6px; /* Add border-radius: 5px; Add border radius */
 }
 .small-button:hover {
-  background-color: #f5ede4; /* Change background color on hover */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: #f5ede4;
+  cursor: pointer;
 }
 
 .text1 {
@@ -120,5 +119,54 @@ footer .footer-container {
 }
 
 .title {
-  color: #3e3628 /* Fully opaque color */ !important;
+  color: #3e3628 !important;
+}
+
+/* NOVI KOD RESPONZIVNOST */
+
+@media (max-width: 768px) {
+  footer .footer-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .text1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  .button-container {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    /*get the freshest news from us */
+    grid-row-start: 3;
+    grid-column-start: 1;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .footer-contact {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    align-items: justify;
+  }
+
+  .text3 {
+    /*CASA DEL MAR 2024*/
+    grid-row-start: 5;
+    grid-column-start: 1;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer-container p {
+    text-align: left;
+  }
 }

@@ -3,10 +3,6 @@ import { Outlet } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Gallery from './components/Gallery'; 
-import About from './components/About'; 
-import Contact from './components/Contact'; 
 import User from './components/User'; 
 import Account from './components/Account'; 
 import Card from './components/Card'; 
@@ -15,9 +11,6 @@ import Articlecard from './components/Articlecard';
 import Collage from './components/Collage';
 import Additionalinfo from './components/Additionalinfo';
 import Salescard from './components/Salescard'; 
-
-
-
 
 
 function App() {

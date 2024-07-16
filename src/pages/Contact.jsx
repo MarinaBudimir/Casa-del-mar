@@ -51,10 +51,8 @@ function Contact() {
   return (
     <main>
       <div className="contact-container">
-        <div className="custom-contactheading4">Contact us </div>
-        <div className="custom-text">
-          Any question or remarks? Just send us a message!
-        </div>
+        <h1>Contact us </h1>
+        <p>Any question or remarks? Just send us a message!</p>
 
         <div className="contact2-container">
           <div className="contact2-content">

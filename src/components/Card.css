@@ -1,6 +1,7 @@
 .heart-icon {
   font-size: 28px;
-  font-weight: bold;
-  color: black; /* Adjust color as needed */
+
+  color: black;
   text-align: right;
+  float: right;
 }

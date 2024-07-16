@@ -42,9 +42,7 @@ function Article2() {
   return (
     <div>
       <div className="article2-container">
-        <div className="custom-heading4">
-          Creating a professional office design{" "}
-        </div>
+        <h1>Creating a professional office design </h1>
 
         <div className="articlecard-list">
           {data.map((category) => (

@@ -9,8 +9,10 @@ function Blogcard({ imgSrc, url, title, description, button }) {
       <div>
         <h5>{title}</h5>
         <p>{description}</p>
+
+        {/* umisto article ide url, stavi ih u bazi */}
         <Link to={url} className="blogcard-button">
-          {button}
+          Read more
         </Link>
       </div>
     </Link>

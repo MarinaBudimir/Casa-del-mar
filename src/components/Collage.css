@@ -3,7 +3,7 @@
   grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
   gap: 30px; /* Space between images */
   padding-bottom: 30px;
-  align-items: center;
+  align-items: justify;
   width: 100%;
 
   text-decoration: none !important;
@@ -18,4 +18,14 @@
 }
 .collage-item {
   text-decoration: none;
+}
+
+/* RESPONZIVNOST */
+
+@media (max-width: 700px) {
+  .collage-container {
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 20px; /* Adjust gap if needed */
+    height: 300px;
+  }
 }

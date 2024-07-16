@@ -35,14 +35,14 @@ const data = [
 function Article3() {
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/article3")
+      .get("http://localhost:3001/api/article3")
       .then((data) => console.log(data));
   }, []);
 
   return (
     <div>
       <div className="article3-container">
-        <div className="custom-heading4">How to use bright colors? </div>
+        <h1>How to use bright colors? </h1>
 
         <div className="articlecard-list">
           {data.map((category) => (

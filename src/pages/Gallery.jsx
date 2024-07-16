@@ -8,8 +8,8 @@ function Gallery() {
   return (
     <main>
       <div className="gallery-container">
-        <h2 className="custom-heading4">Our gallery</h2>
-        <p className="custom-text">
+        <h1>Our gallery</h1>
+        <p>
           Take a look inside our gallery to get inspired. Lose yourself in the
           most perfect and unbelievable furniture items that enriched modern
           homes.

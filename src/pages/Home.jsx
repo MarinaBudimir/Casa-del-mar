@@ -8,12 +8,12 @@ function Home() {
   return (
     <main>
       <div className="home-container">
-        <div className="custom-heading1">Elevate your environment</div>
-        <div className="custom-heading2">Modern furnitures</div>
-        <div className="custom-text">
+        <h10>Elevate your environment</h10>
+        <h4>Modern furnitures</h4>
+        <p>
           Pairing outstanding functionality with aesthetic design across the
           whole house to make it a home of your dreams.{" "}
-        </div>
+        </p>
 
         <div className="content-container">
           <button className="ourgallery-button">

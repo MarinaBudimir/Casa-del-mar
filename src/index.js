@@ -7,14 +7,20 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+
+
+
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import User from './components/User';
+import Account from './components/Account';
 import Products from './pages/Products';
 import Seating from './pages/Seating';
 import Benches from './pages/Benches';
+
 
 import Diningchairs from './pages/Diningchairs';
 import Loungechairs from './pages/Loungechairs';
@@ -22,6 +28,7 @@ import Ottomans from './pages/Ottomans';
 import Sofas from './pages/Sofas';
 import Stools from './pages/Stools';
 import Blog from './pages/Blog'; 
+
 
 import Blog2 from './pages/Blog2'; 
 import Blog3 from './pages/Blog3'; 
@@ -35,15 +42,15 @@ import Article3 from './pages/Article3';
 import Article4 from './pages/Article4'; 
 import Article5 from './pages/Article5'; 
 
-import Chiara from './pages/Chiara'; 
+import Product from './pages/Product'; 
 import Anthea from './pages/Anthea'; 
 import Beatrice from './pages/Beatrice'; 
 import Ayla from './pages/Ayla'; 
 import Celine from './pages/Celine'; 
 import Chloe from './pages/Chloe'; 
 
-
-
+// import Product from './pages/Product'; 
+import UserDashboard from './pages/UserDashboard'; 
 
 
 const router = createBrowserRouter([
@@ -76,6 +83,12 @@ const router = createBrowserRouter([
         path: "/user",
         element: <User />,
       },
+{
+        path: "/account",
+        element: <Account />,
+      },
+
+
       {
         path: "/seating",
         element: <Seating />,
@@ -109,6 +122,11 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
+
+
+     
+
+
       {
         path: "/blog/2",
         element: <Blog2 />,
@@ -132,7 +150,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/article",
+        path: "/article/:id",
         element: <Article />,
       },
       {
@@ -150,10 +168,6 @@ const router = createBrowserRouter([
       {
         path: "/article5",
         element: <Article5 />,
-      },
-{
-        path: "/chiara",
-        element: <Chiara/>,
       },
       {
         path: "/anthea",
@@ -175,7 +189,16 @@ const router = createBrowserRouter([
         path: "/chloe",
         element: <Chloe/>,
       },
-
+      {
+        path: "/benches",
+        element: <Benches/>,
+      },
+      {
+        path: "/:category/:name",
+        element: <Product/>,
+      },
+      {path: "/userdashboard", 
+      element: <UserDashboard/>, },
 
     ]
   },

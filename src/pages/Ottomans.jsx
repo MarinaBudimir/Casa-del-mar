@@ -5,20 +5,20 @@ import axios from "axios";
 
 const data = [
   {
-    title: "Ayla",
+    name: "Ayla",
     showHeart: true,
     imgSrc: "/images/ottomans1.png",
     price: "300,00€",
     url: "/ayla",
   },
   {
-    title: "Esma",
+    name: "Esma",
     showHeart: true,
     imgSrc: "/images/ottomans2.png",
     price: "470,00€",
   },
   {
-    title: "Leyla",
+    name: "Leyla",
     showHeart: true,
     imgSrc: "/images/ottomans3.png",
     price: "900,00€",
@@ -34,8 +34,8 @@ function Ottomans() {
   return (
     <div>
       <div className="ottomans-container">
-        <div className="custom-heading4 ">Ottomans </div>
-        <p className="custom-text">
+        <h1>Ottomans </h1>
+        <p>
           {" "}
           Are you sitting comfortably? With our range of seating pieces you will
           be soon. Choose the one that suits you and your home the best. Sit
@@ -45,7 +45,7 @@ function Ottomans() {
           {data.map((category) => {
             return (
               <Card
-                title={category.title}
+                name={category.name}
                 showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}

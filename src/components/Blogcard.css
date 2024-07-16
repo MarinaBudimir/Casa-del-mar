@@ -52,16 +52,3 @@
   background-color: #f5ede4; /* Change background color on hover */
   cursor: pointer; /* Change cursor to pointer on hover */
 }
-
-.blogcard-container text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  text-align: justify;
-  width: 100%;
-  margin: 0 0;
-  display: inline-block;
-}

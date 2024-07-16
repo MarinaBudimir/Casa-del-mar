@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import "./Salescard.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Salescard({
-  imgSrc,
+  imgSrc1,
   url,
   title,
   size,
   description,
   price,
-  button1,
-  button2,
-  button3,
+  quantity,
 }) {
   const [showDropdown, setShowDropdown] = useState(false); // State to control dropdown visibility
   const [selectedNumber, setSelectedNumber] = useState(null); // State to store selected number
@@ -25,21 +24,47 @@ function Salescard({
     setShowDropdown(false); // Hide dropdown after selection
   };
 
+  const addToFavorites = () => {
+    axios
+      .post("http://localhost:3001/api/favorites", {
+        name: title,
+      })
+      .then((response) => {
+        console.log("Added to favorites:", response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error adding to favorites!", error);
+      });
+  };
+  const addToCarts = () => {
+    axios
+      .post("http://localhost:3001/api/carts", {
+        name: title,
+        quantity: selectedNumber,
+      })
+      .then((response) => {
+        console.log("Added to carts:", response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error adding to carts!", error);
+      });
+  };
+
   return (
-    <Link to={url} className="salescard-container">
-      <img src={imgSrc} alt="" className="salescard-img" />
+    <div className="salescard-container">
+      <img src={imgSrc1} alt="" className="salescard-img" />
       <div>
-        <h8>{title}</h8>
-        <p>{size}</p>
+        <h1>{title}</h1>
+        <p>Size: {size} cm</p>
         <p>{description}</p>
-        <h9>{price}</h9>
+        <h2>Price: {price + ",00€"}</h2>
         <div className="salescard-buttons">
           <button className="salescard-button" onClick={handleButtonClick}>
-            {selectedNumber ? selectedNumber : button1}
+            {selectedNumber ? selectedNumber : "+1"}
           </button>
           {showDropdown && (
             <div className="dropdown-content">
-              {[...Array(10).keys()].map((number) => (
+              {[...Array(quantity).keys()].map((number) => (
                 <button
                   key={number}
                   onClick={() => handleNumberSelection(number + 1)}
@@ -49,15 +74,19 @@ function Salescard({
               ))}
             </div>
           )}
-          <Link to={url} className="salescard-button">
-            {button2}
+
+          {/* cart page */}
+          <Link className="salescard-button" onClick={addToCarts}>
+            Add to shopping cart
           </Link>
-          <Link to={url} className="salescard-button">
-            {button3}
+
+          {/* favorites page */}
+          <Link className="salescard-button" onClick={addToFavorites}>
+            Add to favorites
           </Link>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

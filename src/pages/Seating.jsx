@@ -1,68 +1,100 @@
-import React, { useEffect } from "react";
+/*
+
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Seating.css";
 import axios from "axios";
 
-const data = [
-  {
-    title: "Benches",
-    imgSrc: "/images/seating1.png",
-    url: "/benches",
-  },
-  {
-    title: "Dining chairs",
-    imgSrc: "/images/seating2.png",
-    url: "/diningchairs",
-  },
-  {
-    title: "Lounge chairs",
-    imgSrc: "/images/seating3.png",
-    url: "/loungechairs",
-  },
-  {
-    title: "Ottomans",
-    imgSrc: "/images/seating4.png",
-    url: "/ottomans",
-  },
-  {
-    title: "Sofas",
-    imgSrc: "/images/seating5.png",
-    url: "/sofas",
-  },
-  {
-    title: "Stools",
-    imgSrc: "/images/seating6.png",
-    url: "/stools",
-  },
-];
-
 function Seating() {
+  const [subcategories, setSubcategories] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/seating")
-      .then((data) => console.log(data));
+      .get("http://localhost:3001/api/subcategories")
+      .then((response) => setSubcategories(response.data));
   }, []);
   return (
     <div>
       <div className="seating-container">
-        <div className="custom-heading4 ">Seating </div>
-        <p className="custom-text">
+        <h1>Seating </h1>
+        <p>
           {" "}
           Are you sitting comfortably? With our range of seating pieces you will
           be soon. Choose the one that suits you and your home the best. Sit
           back, relax, and enjoy!{" "}
         </p>
         <url className="card-container">
-          {data.map((category) => {
-            return (
-              <Card
-                title={category.title}
-                imgSrc={category.imgSrc}
-                url={category.url}
-              ></Card>
-            );
+          {subcategories.map((o) => {
+            return <Card name={o.name} imgSrc={o.imgSrc} url={o.url}></Card>;
           })}
         </url>
+      </div>
+    </div>
+  );
+}
+
+export default Seating;
+
+
+*/
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Card from "../components/Card";
+import "./Seating.css";
+import axios from "axios";
+
+function Seating() {
+  const [subcategories, setSubcategories] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/api/subcategories").then((response) => {
+      setSubcategories(response.data);
+      console.log(response.data);
+    });
+  }, []);
+
+  return (
+    <div>
+      <div className="seating-container">
+        <h1>Seating</h1>
+        <p>
+          Are you sitting comfortably? With our range of seating pieces you will
+          be soon. Choose the one that suits you and your home the best. Sit
+          back, relax, and enjoy!
+        </p>
+        <div className="card-container">
+          {subcategories.map((o, index) => {
+            let url;
+            switch (o.name.toLowerCase()) {
+              case "benches":
+                url = "/benches";
+                break;
+              case "dining chairs":
+                url = "/diningchairs";
+                break;
+              case "lounge chairs":
+                url = "/loungechairs";
+                break;
+              case "ottomans":
+                url = "/ottomans";
+                break;
+              case "sofas":
+                url = "/sofas";
+                break;
+              case "stools":
+                url = "/stools";
+                break;
+              default:
+                url = o.url;
+            }
+            return url ? (
+              <Link to={url} className="card-link" key={index}>
+                <Card name={o.name} imgSrc={o.imgSrc} url={url} />
+              </Link>
+            ) : (
+              <Card name={o.name} imgSrc={o.imgSrc} url={o.url} key={index} />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

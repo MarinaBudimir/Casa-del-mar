@@ -3,7 +3,6 @@
 
 .sales-container {
   box-sizing: border-box;
-
   gap: 30px;
   width: 100%;
   padding-top: 15px;
@@ -34,35 +33,6 @@
   justify-content: space-between;
   gap: 20px; /* Adjust the gap between elements */
   padding: 30px;
-}
-
-.salescard-title {
-  font-size: 36px;
-  font-family: "Lora", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  color: #3e3628;
-  margin: 0;
-}
-
-.salescard-text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em;
-  text-align: justify;
-  margin: 10px 0;
-  width: 100%; /* Ensure text takes full width */
-}
-
-.salescard-price {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  margin: 10px 0;
-  position: absolute;
-  display: flex;
 }
 
 .salescard-buttons {
@@ -110,4 +80,25 @@
 
 .dropdown-content button:hover {
   background-color: #f5ede4;
+}
+
+/*responzivnost */
+/* Responsive Styles */
+@media (max-width: 700px) {
+  .salescard-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .salescard-container img {
+    height: 500px !important; /* Adjust height as needed */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .salescard-buttons {
+    position: static; /* Make buttons position static */
+    padding-left: 0; /* Remove left padding */
+    display: flex;
+    padding-top: 15px;
+    gap: 10px; /* Adjust gap if needed */
+  }
 }

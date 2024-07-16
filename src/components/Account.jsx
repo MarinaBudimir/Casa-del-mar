@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Account.css";
-
+import { Link } from "react-router-dom";
 function Account() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -82,12 +82,12 @@ function Account() {
   return (
     <main>
       <div className="account-container">
-        <div className="custom-accountheading4"> Welcome to Casa del mar </div>
-        <div className="custom-text">
+        <h1> Welcome to Casa del mar </h1>
+        <p>
           We are overjoyed to have you join our Casa del mar community. Creating
           free account is your first step towards exploring infinite world of
           stylish furnishings and latest trends in interior design.{" "}
-        </div>
+        </p>
 
         <div className="account2-container">
           <div className="account2-containerforma">
@@ -194,7 +194,13 @@ function Account() {
                 </div>
 
                 <div>
-                  <button type="submit">Create account</button>
+                  <button type="submit">
+                    {" "}
+                    <Link to="/userdashboard" classname="link">
+                      {" "}
+                      Create account
+                    </Link>
+                  </button>
                   <div className="accountcustom-text">
                     By signing up for a Casa del mar account you agree to our
                     Privacy Policy and Terms of Service.{" "}

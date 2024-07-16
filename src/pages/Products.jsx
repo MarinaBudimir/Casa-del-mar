@@ -1,56 +1,72 @@
-import React, { useEffect } from "react";
+/*import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Products.css";
 import axios from "axios";
 
-const data = [
-  {
-    title: "Lighting",
-    imgSrc: "/images/lighting.png",
-  },
-  {
-    title: "Mirrors",
-    imgSrc: "/images/mirrors.png",
-  },
-  {
-    title: "Ornaments",
-    imgSrc: "/images/ornaments.png",
-  },
-  {
-    title: "Seating",
-    imgSrc: "/images/seating.png",
-    url: "/Seating",
-  },
-  {
-    title: "Storage",
-    imgSrc: "/images/storage.png",
-  },
-  {
-    title: "Tables",
-    imgSrc: "/images/tables.jpg",
-  },
-];
-
-function Products() {
+/*
+function Product() {
+  const [product, setProduct] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/products")
-      .then((data) => console.log(data));
+      .get("http://localhost:3001/api/products/Ayla")
+      .then((response) => setProduct(response.data));
+  }, []);
+
+
+
+function Products() {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/api/categories")
+      .then((response) => setCategories(response.data));
   }, []);
   return (
     <div>
       <div className="products-container">
         <url className="card-container">
-          {data.map((category) => {
-            return (
-              <Card
-                title={category.title}
-                imgSrc={category.imgSrc}
-                url={category.url}
-              ></Card>
-            );
+          {categories.map((q) => {
+            return <Card name={q.name} imgSrc={q.imgSrc} url={q.url}></Card>;
           })}
         </url>
+      </div>
+    </div>
+  );
+}
+
+export default Products;
+*/
+
+import React, { useEffect, useState } from "react";
+import Card from "../components/Card";
+import "./Products.css";
+import axios from "axios";
+import { Link } from "react-router-dom"; // Import Link from React Router
+
+function Products() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/api/categories")
+      .then((response) => setCategories(response.data))
+      .catch((error) => console.error("Error fetching categories:", error));
+  }, []);
+
+  return (
+    <div>
+      <div className="products-container">
+        <div className="card-container">
+          {categories.map((q, index) =>
+            q.name === "Seating" ? (
+              <Link to="/seating" className="card-link" key={index}>
+                <Card name={q.name} imgSrc={q.imgSrc} url={"/seating"} />
+              </Link>
+            ) : (
+              <Card name={q.name} imgSrc={q.imgSrc} url={q.url} key={index} />
+            )
+          )}
+        </div>
       </div>
     </div>
   );

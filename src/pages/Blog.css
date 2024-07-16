@@ -20,38 +20,34 @@ main .blog-container {
   color: inherit;
 }
 
-.custom-heading4 {
-  color: #3e3628;
-  font-size: 36px;
-  font-family: "Lora", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  padding-top: 0px;
-}
-
-.custom-text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  text-align: justify;
-}
-
-.numbers-container {
-  padding-top: 15px;
+.pagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 0; /* Remove extra padding */
+  margin: 0 5px; /* Set horizontal margin */
   color: #000000;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  letter-spacing: 0.03em;
+  background: none; /* Remove button background */
+  border: none; /* Remove button border */
+  cursor: pointer;
+
+  font-weight: 400; /* Make the font weight thin */
+  gap: 15px;
   align-items: center; /* Align text vertically in its container */
   mix-blend-mode: hard-light;
   text-align: justify;
-  gap: 15px;
+}
+
+.pagination button.active {
+  font-weight: 600;
+}
+
+.pagination button:hover {
+  text-decoration: underline;
 }

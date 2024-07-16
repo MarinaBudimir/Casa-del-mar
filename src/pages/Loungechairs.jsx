@@ -5,20 +5,20 @@ import axios from "axios";
 
 const data = [
   {
-    title: "Beatrice",
+    name: "Beatrice",
     showHeart: true,
     imgSrc: "/images/loungechairs1.png",
     price: "700,00€",
     url: "/beatrice",
   },
   {
-    title: "Nicole",
+    name: "Nicole",
     showHeart: true,
     imgSrc: "/images/loungechairs2.png",
     price: "900,00€",
   },
   {
-    title: "Marnie",
+    name: "Marnie",
     showHeart: true,
     imgSrc: "/images/loungechairs3.png",
     price: "900,00€",
@@ -34,8 +34,8 @@ function Loungechairs() {
   return (
     <div>
       <div className="loungechairs-container">
-        <div className="custom-heading4 ">Lounge chairs </div>
-        <p className="custom-text">
+        <h1>Lounge chairs </h1>
+        <p>
           {" "}
           Are you sitting comfortably? With our range of seating pieces you will
           be soon. Choose the one that suits you and your home the best. Sit
@@ -45,7 +45,7 @@ function Loungechairs() {
           {data.map((category) => {
             return (
               <Card
-                title={category.title}
+                name={category.name}
                 showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}

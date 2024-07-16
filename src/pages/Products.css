@@ -41,3 +41,19 @@ main .products-container {
   text-decoration: none !important;
   color: inherit;
 }
+
+/* RESPONZIVNOST */
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr !important; /* Two columns */
+    grid-template-rows: 1fr 1fr 1fr !important; /* Three rows */
+    gap: 20px; /* Adjust gap between items */
+  }
+
+  .card-container img {
+    height: 200px; /* Adjust image height */
+    width: 100%;
+    object-fit: cover;
+  }
+}

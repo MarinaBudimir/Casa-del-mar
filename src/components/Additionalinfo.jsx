@@ -2,7 +2,7 @@ import React from "react";
 import "./Additionalinfo.css";
 import { Link } from "react-router-dom";
 import { GoPlus } from "react-icons/go";
-function Additionalinfo({ imgSrc, url, title, description }) {
+function Additionalinfo({ imgSrc6, url, title, description }) {
   return (
     <Link to={url} className="additionalinfo-container">
       <div className="additionalinfo-details">
@@ -33,7 +33,7 @@ function Additionalinfo({ imgSrc, url, title, description }) {
         </h7>
       </div>
       <div className="additionalinfo-img-container">
-        <img src={imgSrc} alt={title} className="additionalinfo-img" />
+        <img src={imgSrc6} alt={title} className="additionalinfo-img" />
       </div>
     </Link>
   );

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+main {
+  background-color: #e8d5be;
+  mix-blend-mode: pass-through;
+}
+
+main .userdashboard-container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.fav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0%;
+  font-size: 18px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  align-items: justify; /* Align text vertically in its container */
+  width: 100%;
+  gap: 40px;
+  text-decoration: none !important;
+}
+
+.fav-container img {
+  width: 200px;
+  height: 200px;
+  margin-top: 15px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding: 0%;
+  font-size: 18px;
+  font-family: "Lora", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+  /* Align text vertically in its container */
+  width: 100%;
+  gap: 40px;
+  text-decoration: none !important;
+}
+
+.cart-container img {
+  width: 200px;
+  height: 200px;
+  margin-top: 15px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.checkout-button {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0px;
+  display: inline-block;
+}
+
+.checkout-button:hover {
+  background-color: #f5ede4;
+  cursor: pointer;
+}
+
+/*RESPONZIVNOST  */
+@media (max-width: 768px) {
+  .fav-container {
+    grid-template-columns: 1fr 1fr !important; /* Two columns */
+    grid-template-rows: 1fr 1fr 1fr !important; /* Three rows */
+    gap: 20px; /* Adjust gap between items */
+  }
+
+  .fav-container img {
+    height: 200px; /* Adjust image height */
+    width: 100%;
+    object-fit: cover;
+  }
+  .cart-container {
+    grid-template-columns: 1fr 1fr !important; /* Two columns */
+    grid-template-rows: 1fr 1fr 1fr !important; /* Three rows */
+    gap: 20px; /* Adjust gap between items */
+  }
+
+  .cart-container img {
+    height: 200px; /* Adjust image height */
+    width: 100%;
+    object-fit: cover;
+  }
+  p {
+    text-align: justify;
+  }
+}

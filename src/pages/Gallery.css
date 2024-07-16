@@ -15,27 +15,6 @@ main .gallery-container {
   padding-bottom: 30px;
 }
 
-.custom-heading4 {
-  color: #3e3628;
-  font-size: 36px;
-  font-family: "Lora", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  padding-top: 0px;
-}
-
-.custom-text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  text-align: justify;
-}
-
 .angry-grid {
   display: grid;
   padding-top: 15px;
@@ -50,7 +29,7 @@ main .gallery-container {
 #item-0 {
   background-image: url("../../public/images/gallery1.png");
 
-  background-size: cover; /* Scale the background image to cover the entire container */
+  background-size: cover;
 
   background-repeat: no-repeat;
 
@@ -100,6 +79,7 @@ main .gallery-container {
   grid-row-end: 4;
   grid-column-end: 3;
 }
+
 #item-4 {
   background-image: url("../../public/images/gallery5.png");
   background-size: 100%;
@@ -111,6 +91,8 @@ main .gallery-container {
 
   grid-row-end: 5;
   grid-column-end: 3;
+
+  background-size: cover;
 }
 #item-5 {
   background-image: url("../../public/images/gallery6.png");
@@ -122,4 +104,30 @@ main .gallery-container {
 
   grid-row-end: 5;
   grid-column-end: 7;
+
+  background-size: cover;
+}
+
+/* RESPONZIVNOST KOD CHATGPT */
+@media screen and (max-width: 768px) {
+  .angry-grid {
+    grid-template-rows: auto; /* Allow rows to adjust automatically */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px;
+  }
+
+  /* Adjust specific item styles */
+  #item-0,
+  #item-1,
+  #item-2,
+  #item-3,
+  #item-4,
+  #item-5 {
+    grid-row-start: auto;
+    grid-row-end: auto;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    height: 350px; /* Ensure consistent height if needed */
+    background-size: cover;
+  }
 }

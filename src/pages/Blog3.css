@@ -20,27 +20,6 @@ main .blog3-container {
   color: inherit;
 }
 
-.custom-heading4 {
-  color: #3e3628;
-  font-size: 36px;
-  font-family: "Lora", sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  padding-top: 0px;
-}
-
-.custom-text {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
-  align-items: center; /* Align text vertically in its container */
-  mix-blend-mode: hard-light;
-  text-align: justify;
-}
-
 .numbers-container {
   display: flex;
   justify-content: center;

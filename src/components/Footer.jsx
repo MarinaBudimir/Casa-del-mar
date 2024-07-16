@@ -13,7 +13,7 @@ function Footer() {
             casa del mar
           </Link>
         </div>
-        <div className="custom-text text2">Get the freshest news from us</div>
+        <p>Get the freshest news from us</p>
         <div className="button-container">
           <button className="small-button">Carrers</button>
           <button className="small-button">
