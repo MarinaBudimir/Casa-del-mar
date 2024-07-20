@@ -14,7 +14,11 @@ main .userdashboard-container {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+.total {
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+}
 .fav-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -30,8 +34,8 @@ main .userdashboard-container {
 }
 
 .fav-container img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 270px;
   margin-top: 15px;
   object-position: center;
   object-fit: cover;
@@ -58,8 +62,8 @@ main .userdashboard-container {
 }
 
 .cart-container img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 270px;
   margin-top: 15px;
   object-position: center;
   object-fit: cover;
@@ -76,8 +80,9 @@ main .userdashboard-container {
   text-decoration: none;
   border-radius: 0px;
   display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 15px;
 }
-
 .checkout-button:hover {
   background-color: #f5ede4;
   cursor: pointer;
@@ -108,6 +113,14 @@ main .userdashboard-container {
     object-fit: cover;
   }
   p {
+    color: #000000;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.03em; /* Set letter spacing to 3% of the font size */
+    align-items: center; /* Align text vertically in its container */
+    mix-blend-mode: hard-light;
     text-align: justify;
+
+    width: 100%;
   }
 }

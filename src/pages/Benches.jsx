@@ -6,20 +6,17 @@ import axios from "axios";
 const data = [
   {
     name: "Chiara",
-    showHeart: true,
     imgSrc: "/images/benches1.png",
     price: "750,00€",
     url: "Chiara",
   },
   {
     name: "Dilara",
-    showHeart: true,
     imgSrc: "/images/benches2.png",
     price: "800,00€",
   },
   {
     name: "Vitalia",
-    showHeart: true,
     imgSrc: "/images/benches3.png",
     price: "900,00€",
   },
@@ -43,7 +40,7 @@ function Benches() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
+                /*showHeart={category.showHeart} */
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}
@@ -57,3 +54,5 @@ function Benches() {
 }
 
 export default Benches;
+
+//ssd

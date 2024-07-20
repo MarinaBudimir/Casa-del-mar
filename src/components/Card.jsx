@@ -46,37 +46,21 @@ import React, { useState } from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
-function Card({ name, showHeart, imgSrc, url, price, quantity }) {
-  const [isHeartFilled, setIsHeartFilled] = useState(false);
-
+function Card({ name, imgSrc, url, price, quantity }) {
   // const handleHeartClick = (e) => {
   //   e.preventDefault(); // Prevent default action of the click (navigation)
+
   //   setIsHeartFilled(!isHeartFilled);
 
-  //   if (!isHeartFilled) {
+  //   if (isHeartFilled) {
+  //     setIsHeartFilled(false);
+  //     deleteFromFavorites();
+  //   } else {
+  //     setIsHeartFilled(true);
   //     addToFavorites();
   //   }
-
-  //   if (isHeartFilled) {
-  //     deleteFromFavorites();
-  //   }
   // };
-
-  const handleHeartClick = (e) => {
-    e.preventDefault(); // Prevent default action of the click (navigation)
-
-    setIsHeartFilled(!isHeartFilled);
-
-    if (isHeartFilled) {
-      setIsHeartFilled(false);
-      deleteFromFavorites();
-    } else {
-      setIsHeartFilled(true);
-      addToFavorites();
-    }
-  };
 
   const addToFavorites = () => {
     axios
@@ -104,18 +88,6 @@ function Card({ name, showHeart, imgSrc, url, price, quantity }) {
     <Link to={url} className="card">
       <h2>{name}</h2>
       <p>{quantity}</p>
-      {showHeart && (
-        <div onClick={handleHeartClick}>
-          {isHeartFilled ? (
-            <AiFillHeart className="heart-icon" style={{ color: "#3e3628" }} />
-          ) : (
-            <AiOutlineHeart
-              className="heart-icon"
-              style={{ color: "#3e3628" }}
-            />
-          )}
-        </div>
-      )}
       <img src={imgSrc} alt="" />
       <p>{price}</p>
     </Link>

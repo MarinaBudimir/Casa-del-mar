@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Sofas.css";
 import axios from "axios";
@@ -6,31 +6,24 @@ import axios from "axios";
 const data = [
   {
     name: "Celine",
-    showHeart: true,
     imgSrc: "/images/sofas1.png",
     price: "1000,00€",
-    url: "/celine",
+    url: "Celine",
   },
   {
     name: "Masha",
-    showHeart: true,
     imgSrc: "/images/sofas2.png",
     price: "1200,00€",
   },
   {
     name: "Nora",
-    showHeart: true,
     imgSrc: "/images/sofas3.png",
     price: "1900,00€",
   },
 ];
 
 function Sofas() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/sofas")
-      .then((data) => console.log(data));
-  }, []);
+  const [sofas, setSofas] = useState(data);
   return (
     <div>
       <div className="sofas-container">
@@ -46,7 +39,6 @@ function Sofas() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}

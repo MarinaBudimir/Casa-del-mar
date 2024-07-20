@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Ottomans.css";
 import axios from "axios";
@@ -6,31 +6,24 @@ import axios from "axios";
 const data = [
   {
     name: "Ayla",
-    showHeart: true,
     imgSrc: "/images/ottomans1.png",
     price: "300,00€",
-    url: "/ayla",
+    url: "Ayla",
   },
   {
     name: "Esma",
-    showHeart: true,
     imgSrc: "/images/ottomans2.png",
     price: "470,00€",
   },
   {
     name: "Leyla",
-    showHeart: true,
     imgSrc: "/images/ottomans3.png",
     price: "900,00€",
   },
 ];
 
 function Ottomans() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/ottomans")
-      .then((data) => console.log(data));
-  }, []);
+  const [ottomans, setOttomans] = useState(data);
   return (
     <div>
       <div className="ottomans-container">
@@ -46,7 +39,6 @@ function Ottomans() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}

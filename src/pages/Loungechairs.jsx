@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
 import "./Loungechairs.css";
 import axios from "axios";
@@ -6,31 +6,24 @@ import axios from "axios";
 const data = [
   {
     name: "Beatrice",
-    showHeart: true,
     imgSrc: "/images/loungechairs1.png",
     price: "700,00€",
-    url: "/beatrice",
+    url: "Beatrice",
   },
   {
     name: "Nicole",
-    showHeart: true,
     imgSrc: "/images/loungechairs2.png",
     price: "900,00€",
   },
   {
     name: "Marnie",
-    showHeart: true,
     imgSrc: "/images/loungechairs3.png",
     price: "900,00€",
   },
 ];
 
 function Loungechairs() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/loungechairs")
-      .then((data) => console.log(data));
-  }, []);
+  const [loungechairs, setLoungechairs] = useState(data);
   return (
     <div>
       <div className="loungechairs-container">
@@ -46,7 +39,6 @@ function Loungechairs() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}

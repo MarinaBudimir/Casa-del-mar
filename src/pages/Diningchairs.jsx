@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
 import "./Diningchairs.css";
 import axios from "axios";
@@ -6,32 +6,24 @@ import axios from "axios";
 const data = [
   {
     name: "Anthea",
-    showHeart: true,
     imgSrc: "/images/diningchairs1.png",
     price: "550,00€",
-    url: "/anthea",
+    url: "Anthea",
   },
   {
     name: "Chelsea",
-    showHeart: true,
     imgSrc: "/images/diningchairs2.png",
     price: "600,00€",
   },
   {
     name: "Stella",
-    showHeart: true,
     imgSrc: "/images/diningchairs3.png",
     price: "900,00€",
   },
 ];
 
 function Diningchairs() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/diningchairs")
-      // .then((d) => console.log(d.data));
-      .then((data) => console.log(data));
-  }, []);
+  const [diningchairs, setDiningchairs] = useState(data);
   return (
     <div>
       <div className="diningchairs-container">
@@ -47,7 +39,6 @@ function Diningchairs() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}

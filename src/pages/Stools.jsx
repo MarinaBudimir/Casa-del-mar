@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "./Stools.css";
 import axios from "axios";
@@ -6,31 +6,24 @@ import axios from "axios";
 const data = [
   {
     name: "Chloe",
-    showHeart: true,
     imgSrc: "/images/stools1.png",
     price: "270,00€",
-    url: "/chloe",
+    url: "Chloe",
   },
   {
     name: "Isabel",
-    showHeart: true,
     imgSrc: "/images/stools2.png",
     price: "330,00€",
   },
   {
     name: "Rocio",
-    showHeart: true,
     imgSrc: "/images/stools3.png",
     price: "450,00€",
   },
 ];
 
 function Stools() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/api/stools")
-      .then((data) => console.log(data));
-  }, []);
+  const [stools, setStools] = useState(data);
   return (
     <div>
       <div className="stools-container">
@@ -46,7 +39,6 @@ function Stools() {
             return (
               <Card
                 name={category.name}
-                showHeart={category.showHeart}
                 imgSrc={category.imgSrc}
                 url={category.url}
                 price={category.price}

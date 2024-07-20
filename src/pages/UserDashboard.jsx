@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./UserDashboard.css";
 import axios from "axios";
-import Card from "../components/Card";
-import Salescard from "../components/Card";
+import FavCard from "../components/FavCard";
 import { Link } from "react-router-dom";
+import CartCard from "../components/CartCard";
 
 function UserDashboard() {
   const [favorites, setFavorites] = useState([]);
@@ -27,33 +27,39 @@ function UserDashboard() {
       .catch((error) => console.error("Error fetching carts:", error));
   }, []);
 
-  const handleHeartClick = (index) => {
-    const favorite = favorites[index];
-
-    // Remove favorite from database
+  const handleFavoriteDelete = (id) => {
     axios
-      .delete("http://localhost:3001/api/favorites/${favorite._id}")
+      .delete(`http://localhost:3001/api/favorites/${id}`)
       .then(() => {
-        // Remove favorite from state
-        const updatedFavorites = favorites.filter((_, i) => i !== index);
-        setFavorites(updatedFavorites);
+        setFavorites((prevFavorites) =>
+          prevFavorites.filter((favorite) => favorite._id !== id)
+        );
       })
       .catch((error) => console.error("Error deleting favorite:", error));
   };
 
-  const handleCartDelete = (index) => {
-    const cart = carts[index];
-
-    // Remove cart item from database
+  const handleCartDelete = (id) => {
     axios
-      .delete("http://localhost:3001/api/carts/${cart._id}")
+      .delete(`http://localhost:3001/api/carts/${id}`)
       .then(() => {
-        // Remove cart item from state
-        const updatedCarts = carts.filter((_, i) => i !== index);
-        setCarts(updatedCarts);
+        setCarts((prevCarts) => prevCarts.filter((cart) => cart._id !== id));
       })
       .catch((error) => console.error("Error deleting cart:", error));
   };
+
+  // Function to calculate the total amount
+  const calculateTotalAmount = () => {
+    return carts.reduce((total, item) => {
+      return total + item.price * item.quantity;
+    }, 0);
+  };
+
+  // Format the total amount to use comma as decimal separator
+  const formatAmount = (amount) => {
+    return amount.toFixed(2).replace(".", ",");
+  };
+
+  const totalAmount = formatAmount(calculateTotalAmount());
 
   return (
     <main>
@@ -67,32 +73,31 @@ function UserDashboard() {
         <h2>Your cart</h2>
         <ul className="cart-container">
           {carts.map((i) => (
-            <Salescard
+            <CartCard
               key={i._id}
               name={i.name}
-              imgSrc={i.imgSrc}
+              imgSrc1={i.imgSrc1}
               size={i.size}
               url={i.url}
               price={i.price}
               quantity={i.quantity}
+              onDelete={() => handleCartDelete(i._id)}
             />
           ))}
         </ul>
-        <p>Total amount: </p>
+
+        <p className="total">Total amount: {totalAmount} €</p>
         <Link className="checkout-button">Proceed to checkout</Link>
-        <p></p>
 
         <h2>Your favorites</h2>
-
         <ul className="fav-container">
           {favorites.map((category) => (
-            <Card
+            <FavCard
               key={category._id}
               name={category.name}
-              imgSrc={category.imgSrc}
-              showHeart={true} // Always show heart icon in favorites
-              isFavorite={true}
+              imgSrc1={category.imgSrc1}
               url={category.url}
+              onDelete={() => handleFavoriteDelete(category._id)}
             />
           ))}
         </ul>
